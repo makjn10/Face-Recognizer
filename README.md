@@ -39,7 +39,7 @@ A project for recognition of faces among several faces in real-time.
  2. Face_Recognition :
     * Here again we use built-in Haar-cascade classifier in opencv to detect and extract faces in an image(frame of the live             stream).
     * Then we use KNN (K-nearest-neighbours) algorithm to classify or label the face as a face of a particular person.
-      Algorithm Description:
+      ##### Algorithm Description:
       The KNN classifier is first trained on a set of labeled (known) faces and can then predict the person
       in an unknown image by finding the K most similar faces (images with closet face-features under eucledian distance)
       in its training set, and performing a majority vote on their label.
