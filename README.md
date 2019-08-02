@@ -30,3 +30,20 @@ A project for recognition of faces among several faces in real-time.
    ```
    
 3. You can see the predicted labeling to all the faces in live video stream captured from your webcam. Press 'q' key to exit the      program.
+
+### How it works
+ 1. Face_data_collection : 
+    * Here we use built-in Haar-cascade classifier in opencv to detect and extract faces in an image and store these extracted           images in a particular location as numpy linear arrays.
+    * Images are extracted from the live stream extracted through the webcam using opencv.
+ 
+ 2. Face_Recognition :
+    * Here again we use built-in Haar-cascade classifier in opencv to detect and extract faces in an image(frame of the live             stream).
+    * Then we use KNN (K-nearest-neighbours) algorithm to classify or label the face as a face of a particular person.
+      Algorithm Description:
+      The KNN classifier is first trained on a set of labeled (known) faces and can then predict the person
+      in an unknown image by finding the K most similar faces (images with closet face-features under eucledian distance)
+      in its training set, and performing a majority vote on their label.
+      For example , if k = 10 , and the ten closest face images to the given image in the training set are three image of A
+      and seven images of B , The result would be 'B'.
+    
+    
